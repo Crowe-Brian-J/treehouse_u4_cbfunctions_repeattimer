@@ -21,3 +21,13 @@ function getTime() {
 function tickClock() {
   clockSection.textContent = getTime()
 }
+
+//call tickClock as page loads, let setInterval do it every second after
+tickClock()
+
+//use setInterval function to execute clock every second
+//setInterval(callback, delay in milliseconds)
+//setInterval(tickClock, 1000)
+
+//test if you can use an anonymous arrow function in place of tickClock in setInterval
+setInterval(() => (clockSection.textContent = getTime()), 1000)
